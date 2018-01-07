@@ -2,7 +2,7 @@ import telebot
 import json
 import urllib.request as ul
 
-TOKEN = '510281377:AAGrLekadolEI_9kjQn3TYbe6DMod_gXlgI'
+TOKEN = 'YOUR_TOKEN'
 bot = telebot.TeleBot(TOKEN)
 country = None
 @bot.message_handler(commands=['start'])
