@@ -15,7 +15,7 @@ def town(countryRequest):
     country = countryRequest
     bot.register_next_step_handler(sent, weather)
 def weather(townRequest):
-    url = 'http://api.wunderground.com/api/17fd104bf040ac3b/geolookup/conditions/q/'+ country.text + '/' + str(townRequest.text) + '.json'
+    url = 'http://api.wunderground.com/api/YOUR_APP_ID/geolookup/conditions/q/'+ country.text + '/' + str(townRequest.text) + '.json'
     f = ul.urlopen(url)
     json_string = f.read()
     parsed_json = json.loads(json_string)
