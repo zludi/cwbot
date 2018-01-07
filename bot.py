@@ -24,7 +24,7 @@ def weather(townRequest):
     date = parsed_json['current_observation']['observation_time']
     wind =  parsed_json['current_observation']['wind_dir']
     windSpeed  =  parsed_json['current_observation']['wind_kph']
-    pressure = int( parsed_json['current_observation']['pressure_mb']) / 1000 * 750 
+    pressure = float( parsed_json['current_observation']['pressure_mb']) / 1000 * 750 
     UV =  parsed_json['current_observation']['UV']
     cloudness =  parsed_json['current_observation']['weather']
     humidity = parsed_json['current_observation']['relative_humidity']
