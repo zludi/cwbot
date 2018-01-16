@@ -9,11 +9,13 @@ country = None
 def start(start):
     sent = bot.send_message(start.chat.id, 'Your country or state')
     bot.register_next_step_handler(sent, town)
+
 def town(countryRequest):
     global country
     sent = bot.send_message(countryRequest.chat.id, 'Your city')
     country = countryRequest
     bot.register_next_step_handler(sent, weather)
+
 def weather(townRequest):
     url = 'http://api.wunderground.com/api/YOUR_API_ID/geolookup/conditions/q/'+ country.text + '/' + str(townRequest.text) + '.json'
     try:
